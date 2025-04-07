@@ -15,6 +15,23 @@
         max-width: 100vw;
         display: block;
       }
+      .footer {
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 0.8em;
+      }
+      .footer a {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -22,5 +39,12 @@
     <script type="module" src="/src/main.tsx"></script>
     <elevenlabs-convai agent-id="Fz7JmCc6MvtUtehfRBcE"></elevenlabs-convai>
     <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+    
+    <div class="footer">
+      <a href="/privacy-policy.html">Privacy Policy</a> | 
+      <a href="/terms-of-service.html">Terms of Service</a> | 
+      <a href="/data-deletion.html">Data Deletion</a>
+      <p>&copy; 2025 The Agent Factory. All rights reserved.</p>
+    </div>
   </body>
 </html>
