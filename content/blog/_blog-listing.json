@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/home/user/project/content/blog/welcome-to-agent-factory.md",
+    "filename": "welcome-to-agent-factory.md",
+    "title": "Welcome to The Agent Factory",
+    "date": "2025-11-11",
+    "description": "Introducing The Agent Factory - your gateway to autonomous AI agents",
+    "tags": "announcement, welcome, agents"
+  },
+  {
+    "path": "/home/user/project/content/blog/how-agents-work.md",
+    "filename": "how-agents-work.md",
+    "title": "How Autonomous Agents Work",
+    "date": "2025-11-10",
+    "description": "A deep dive into the technology powering autonomous AI agents",
+    "tags": "technical, ai, automation"
+  }
+]
