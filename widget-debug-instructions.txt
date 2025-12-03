@@ -1,0 +1,56 @@
+VOICE WIDGET 404 ERROR DEBUG INSTRUCTIONS
+==========================================
+
+PROBLEM:
+The voice widget is not appearing on https://theagentfactory.com because the widget script is returning a 404 error.
+
+FAILING URL:
+https://voice-agent-frontend-production-e709.up.railway.app/widget/v1/widget.js
+
+EMBED CODE (in agentfactory/project index.html):
+```html
+<script src="https://voice-agent-frontend-production-e709.up.railway.app/widget/v1/widget.js" defer></script>
+<voice-agent
+  agent-id="ag_dWX5AH6n"
+  position="bottom-right"
+  theme="auto"
+></voice-agent>
+```
+
+TASK:
+Find why /widget/v1/widget.js returns 404. Look for:
+
+1. Route definitions - Is there a route handler for /widget/v1/widget.js?
+   - Check Express routes, Next.js pages/api, or whatever framework is used
+   - Search for: "widget", "/v1/", "widget.js"
+
+2. Static file serving - Is widget.js being built/served as a static file?
+   - Check if there's a /public/widget/v1/widget.js
+   - Check if there's a build step that creates widget.js
+   - Check static file middleware configuration
+
+3. Build process - Does widget.js get generated during build?
+   - Check package.json scripts
+   - Check webpack/vite/rollup config for widget bundle
+
+4. Deployment - Is the widget code actually deployed to Railway?
+   - Check railway.json or railway.toml config
+   - Check if the build output includes the widget files
+
+COMMANDS TO RUN:
+```bash
+# Find widget-related files
+find . -name "*widget*" -type f
+
+# Search for route definitions
+grep -r "widget" --include="*.ts" --include="*.js" --include="*.tsx"
+
+# Check for v1 routes
+grep -r "/v1/" --include="*.ts" --include="*.js"
+
+# Look at build config
+cat package.json
+```
+
+EXPECTED OUTCOME:
+Either fix the route/build so /widget/v1/widget.js returns the widget JavaScript, or provide the correct URL that should be used in the embed code.
